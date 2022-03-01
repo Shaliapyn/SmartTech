@@ -173,4 +173,4 @@ console.log(countWords('   You  area programmer '))
 		return splitText
 	}
 	console.log(extractYears(text))
-
+//

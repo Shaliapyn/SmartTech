@@ -1,3 +1,230 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+html body {
+  width: 100%;
+  height: 100%;
+  background-color: #101932;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.wrapper {
+  max-width: 100%;
+  min-width: 320px;
+}
+
 .container {
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 100vh;
+  border: 1px solid #000;
+}
+
+.whois-section {
+  margin-top: 30px;
+}
+
+.white-block {
+  height: 400px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.whois-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.whois-header__logo {
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 10%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  width: 170px;
+}
+
+.whois-header__lfox {
+  background-color: #E11D2E;
+  width: 50px;
+  height: 50px;
+  border-radius: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.whois-header__text {
+  color: #E11D2E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+}
+
+.whois-header__join {
+  z-index: 3;
+}
+
+.btn {
+  background-color: #E11D2E;
+  height: 35px;
+  width: 150px;
+  border-radius: 8px;
+  color: white;
+}
+
+.btn-moreabout {
   width: 200px;
+  height: 45px;
+  opacity: 0.05;
+  border-radius: 8px;
+  color: white;
+}
+.btn-moreaboutspan {
+  opacity: 1;
+}
+
+.main-btn-join {
+  width: 150px;
+  height: 45px;
+  margin-right: 20px;
+}
+
+.whois-main {
+  margin-top: 55px;
+  position: relative;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.whois-left {
+  width: 40%;
+}
+.whois-left .whois-left-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 280px;
+}
+.whois-left .whois-left-text h1 {
+  font-size: 40px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #E11D2E;
+  margin-bottom: 50px;
+}
+
+.whois-right {
+  height: 500px;
+  width: 60%;
+  background: url("../img/bigFox.png") 20px 0/60% auto no-repeat;
 }
