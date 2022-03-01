@@ -153,9 +153,9 @@ console.log(countWords('   You  area programmer '))
 	*
 	* e.g. for text:
 	*
-	* Usually people who were born in 1995 can find they first job not later than
-	* in 2020 but also not earlier than in 2012. Number 11999 is not included in
-	* the result because it's too big. It is out of range between 1900 and 2099.
+	 Usually people who were born in 1995 can find they first job not later than
+	 in 2020 but also not earlier than in 2012. Number 11999 is not included in
+	 the result because it's too big. It is out of range between 1900 and 2099.
 	*
 	* The result should be `[1995, 2020, 2012, 1900, 2099]`
 	*
@@ -164,12 +164,12 @@ console.log(countWords('   You  area programmer '))
 	* @return {number[]}
 	*/
 
-	let text =  'Usually people who were born in 1995 can find they first job not later than in 2020 but 2200 also 1938 not earlier than in 2012. Number 11999 is not included in the result because it'
+	let text =  "Usually people who were born in 1995 can find they first job not later than in 2020 but also not earlier than in 2012. Number 11999 is not included in the result because it's too big. It is out of range between 1900 and 2099."
 
 	function extractYears(text) {
 
 		let splitText = text.split(' ')
-		
+		splitText = splitText.filter((item) => (item >= 1900 && item <= 2099))
 		return splitText
 	}
 	console.log(extractYears(text))

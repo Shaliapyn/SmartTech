@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /*Обнуление*/
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -79,6 +81,7 @@ html body {
   height: 100%;
   background-color: #101932;
   font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
 }
 
 .wrapper {
@@ -186,6 +189,7 @@ html body {
   width: 150px;
   height: 45px;
   margin-right: 20px;
+  font-weight: bold;
 }
 
 .whois-main {
@@ -215,12 +219,20 @@ html body {
       justify-content: space-around;
   height: 280px;
 }
-.whois-left .whois-left-text h1 {
+.whois-left h1 {
   font-size: 40px;
   font-size: 40px;
   font-weight: bold;
   color: #E11D2E;
   margin-bottom: 50px;
+}
+.whois-left p {
+  color: #A0A3B5;
+  font-weight: 300;
+}
+.whois-left :nth-child(2) {
+  color: #71768E;
+  font-weight: 400;
 }
 
 .whois-right {
