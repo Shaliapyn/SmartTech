@@ -81,17 +81,38 @@ html body {
     height: 45px;
     opacity: 0.05;
     border-radius: 8px;
-    color: white;
-    &span {
+    background-color: white;
+    & span {
         opacity: 1;
+        color: white;
     }
-
 }
+
 .main-btn-join {
     width: 150px;
     height: 45px;
     margin-right: 20px;
     font-weight: bold;
+}
+.btns__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+    height: 65px;
+    border: 1px solid white;
+    opacity: 0.5;
+    border-radius: 8px;
+    & a {
+        color: white;
+        margin-left: 20px;
+        opacity: 1;
+    }
+    & p {
+        margin-left: 20px;
+        font-size: 13px;
+    }
+
 }
 .join-btn {
 }
@@ -113,8 +134,7 @@ html body {
         height: 280px;
     }
     & h1 {
-        font-size: 40px;
-        font-size: 40px;
+        font-size: 50px;
         font-weight: bold;
         color: #E11D2E;
         margin-bottom: 50px;
@@ -132,4 +152,14 @@ html body {
     height: 500px;
     width: 60%;
     background: url('../img/bigFox.png') 20px 0/60% auto no-repeat;;
+}
+.whois-footer {
+    height: 35px;
+    background-color: #5A4039;
+    opacity: 0.7;
+    color: #FFF500;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+
 }
