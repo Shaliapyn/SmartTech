@@ -41,27 +41,21 @@ function isEqualDeep(obj, obj2){
 // * @returns {Object}
 // */
 
-const data = { a: 1, b: 2 };
-const data2 = { c: 1, b: 2 };
-const intersection = (firstObject, secondObject) => {
-    let firstEnt =  Object.entries(firstObject);
-    let secondEnt = Object.entries(secondObject);
-    let commonEnt = [...firstEnt, ...secondEnt];
-    
-    const result = commonEnt.filter((elem, i) =>{
-        return commonEnt.indexOf(elem) !== i
-    })
-    return result
-};
-console.log(intersection(data, data2)); // { b: 2 }
-console.log(Object.entries(data) == Object.entries(data))
 
+function intersection(firstObject, secondObject) {
+    let firstObjKeys = Object.keys(firstObject);
 
-let arr = {name:'ihor'}
-JSON.stringify(arr)
-let arr3 = arr
-let arr2 = {name:'ihor'}
-JSON.stringify(arr2)
-console.log(arr == arr2)
-let arr4 = JSON.stringify([ [ 'a', 1 ], [ 'b', 2 ], [ 'c', 1 ], [ 'b', 2 ] ]) 
-console.log( arr4[1])
+  return firstObjKeys.reduce((res = {}, key) => {
+    if (firstObject[key] === secondObject[key]) {
+      res = {
+        ...res,
+        [key]: firstObject[key],
+      };
+    }
+    return res;
+  }, {});
+   
+}
+  const data = { a: 1, b: 2 };
+  const data2 = { c: 1, b: 2 };
+  console.log(intersection(data, data2)); // { b: 2 }
