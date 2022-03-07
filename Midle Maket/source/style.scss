@@ -3,13 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
 
+$regular-width: 18px;
+$section-fs:34px;
+$subtitle-fs: 13px;
+
 html body {
     width: 100%;
     height: 100%;
     background-color: #101932;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
-
+    font-size: $regular-width;
+    color: white;
 
 }
 .wrapper {
@@ -109,7 +113,7 @@ html body {
     }
     & p {
         margin-left: 20px;
-        font-size: 13px;
+        font-size: $subtitle-fs;
     }
 
 }
@@ -124,7 +128,7 @@ html body {
     
 }
 .whois-left {
-
+    position: relative;
     width: 40%;
     .whois-left-text {
         display: flex;
@@ -182,19 +186,56 @@ html body {
     & .webimg-main__background {
         height: 100%;
         width: 100%;
-        border: 1px solid #000;
         position: absolute;
-        z-index: 1;
+        z-index: 10;
         top: 0;
         left: 0;
         background:  url('../img/midle\ fox.png') center/auto auto no-repeat, url('../img/earth.png') center/auto auto no-repeat, url('../img/web.png') center/auto auto no-repeat;
     }
 }
+.webimg-gradient{
+    position: absolute;
+    z-index: -10000;
+    background-color: rgba(225, 29, 46, 1);
+    filter: blur(8px);
+    -webkit-filter: blur(30px);
+    opacity: 0.2;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    box-shadow: #E11D2E;
+}
+.gradient-small {
+    position: absolute;
+    top: 260px;
+    right: 300px;
+}
+.gradient-big {
+    background-color: rgb(225, 29, 137);
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    top: 250px;
+    left: 600px;
+    filter: blur(0px);
+    -webkit-filter: blur(60px);
+    z-index: -10000;
+}
+// .webimg-main__shadow {
+//     height: 300px;
+//     width: 300px;
+//     z-index: -10000;
+//     box-shadow: 0px 0px 2px 22px #143D85;
+//     opacity: 0.7;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     border-radius: 50%;
+// }
 .webimg-main__icons {
     position: relative;
     width: 100%;
     height: 100%;
-    border: 1px solid #000;
     & .red-icon {
         position: absolute;
         top: 40%;
@@ -242,3 +283,95 @@ html body {
     display: flex;
     align-items: center;
 }
+//------------------------HOW IT WORKDS SECTION--------------------------// 
+.how_it_works-blocks {
+    display: flex;
+    justify-content: space-between;
+    & div {
+        font-weight: 300;
+        border-radius: 14px;
+        background-color: #384D70;
+        min-width: 300px;
+        max-width: 360px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        & h3 {
+            padding-bottom: 20px;
+            padding-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+    }
+}
+.section-title {
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: $section-fs;
+    text-align: center;
+}
+
+.how_it_works-blocks__orange {
+    & .orange-icon {
+        height: 90px;
+        width: 90px;
+    }
+}
+.how_it_works-blocks__list {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    & li {
+        padding-bottom: 20px;
+    }
+    min-height: 150px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    line-height: 24px;
+    // min-height: 190px;
+    & :first-child  {
+        opacity: 0.4;
+    }
+}
+//------------------------------------- PAY TO EARN SECTION----------------
+.play_to_earn-section {
+    margin-top: 120px;
+}
+.section-title__subtitle {
+    font-size: $subtitle-fs+3px;
+    margin-top: 18px;
+    color: white;
+    font-weight: 300;
+    opacity: 0.6;
+    margin-bottom: 30px;
+}
+.pay_to_ear-blocks__long {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px 30px 30px;
+    background-color: #071022;
+    border-radius: 14px;
+}
+.pay_to_ear-blocks__long-left {
+    min-width: 370px;
+    min-height: 145px;
+    border-radius: 14px;
+    background:url('../img/midle\ fox.png') 20px 20px/105px 105px no-repeat, url('../img/hoblin.png')220px 20px/105px 105px no-repeat, url('../img/web2.png') 200px 2px/150px 150px no-repeat, linear-gradient( rgba(161, 68, 91, 0.411), rgba(201, 13, 13, 0.055) ), url("../img/city.png") left/cover no-repeat;
+}
+.pay_to_ear-blocks__long-right {
+    max-width: 710px;
+    & p {
+        color: white;
+        font-weight: 300;
+    }
+
+    & h3 {
+        color: white;
+        opacity: 1;
+    }
+}
+
+
