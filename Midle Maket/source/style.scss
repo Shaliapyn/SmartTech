@@ -177,7 +177,6 @@ html body {
     width: 90%;
     margin: 0 auto;
     margin-top: 60px;
-    border: 1px solid #000;
     & img {
         opacity: 0.1;
         
@@ -571,7 +570,6 @@ html body {
     & img {
         opacity: 0.7;
         margin-top: 10px;
-        margin-left: 15px;
     }
 }
 //-----------------------------------------------
@@ -657,10 +655,14 @@ html body {
     .last-block__icons {
         margin-top: 40px;
         display: flex;
-        justify-content: space-between;
-        width: 40%;
+        justify-content: center;
+        width: 100%;
         z-index: 1000;
+        flex-wrap: wrap;
+        margin: 0 -10px;
         & li {
+            margin: 0 10px;
+            margin-bottom: 20px;
             width: 55px;
             height: 55px;
             background-color: #E11D2E;
@@ -668,6 +670,7 @@ html body {
             display: flex;
             align-items: center;
             justify-content: center;
+            
         }
         & li img {
             width: 30px;
@@ -694,16 +697,33 @@ html body {
         opacity: 0.8;
     }
 }
-.earth-absolute {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url('../img/earth\ opacity.png') center/70% 70% no-repeat;
-    height: 100%;
-    width: 100%;
-    opacity: 0.2;
-    z-index: 0;
+
+@media (min-width: 768px) {
+    .earth-absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url('../img/earth\ opacity.png') center/70% 70% no-repeat;
+        height: 100%;
+        width: 100%;
+        opacity: 0.2;
+        z-index: 0;
+    }
 }
+@media (max-width: 768px) {
+    .earth-absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url('../img/earth\ opacity.png') -400px 100px/cover no-repeat;
+        height: 100%;
+        width: 100%;
+        opacity: 0.2;
+        z-index: 0;
+
+    }
+}
+
 .footer-footer {
     padding: 30px;
     text-align: center;
@@ -732,7 +752,6 @@ html body {
         justify-content: space-around;
         margin: 0 auto;
         height: 30%;
-        border: 1px solid #000;
         .btns__link {
             margin-top: 0;
         }
@@ -754,7 +773,6 @@ html body {
         font-size: 14px;
     }
     .whois-left {
-        border: 1px solid #000;
         width: 100%;
         height: 700px;
     }
@@ -803,7 +821,6 @@ html body {
         margin-top: 20px;
         width: 100%;
         height: 90px;
- 
     }
     .companies-logo img {
         width: 100px;
@@ -814,7 +831,6 @@ html body {
         height: 600px;
     }
     .webimg-main__background {
-        border: 1px solid #000;
         height: 100%;
         width: 100%;
         position: absolute;
@@ -826,7 +842,6 @@ html body {
     .webimg-main__text {
         width: 100%;
         height: 80%;
-        border: 1px solid #000;
         justify-content: space-between;
         .btn-lets-find {
             width: 70%;
@@ -838,7 +853,7 @@ html body {
     }
     // ICONS RED ORANGE BLUE 
     .webimg-main__icons {
-        border: 1px solid #000;
+
     }
     .webimg-main__icons div img {
         width: 70px;
@@ -886,6 +901,67 @@ html body {
     .pay_to_ear-blocks__long {
         padding: 10px 15px 30px 10px;
 
+    }
+    // ------------------------
+    .pay_to_ear-block__two {
+        flex-direction: column;
+        & div {
+            min-width: 100%;
+        }
+    }
+    .pay_to_ear-block__two-1 {
+        flex-direction: column;
+        text-align: center;
+        padding: 0px 30px 30px 30px;
+        line-height: 24px;
+        margin-bottom: 22px;
+        & .coin-icon {
+            width: 170px;
+            height: 170px;
+        }
+        & div h3 {
+            font-size: 24px;
+        }
+    }
+    .pay_to_ear-block__two-2 {
+        flex-direction: column;
+        text-align: center;
+        padding: 0px 30px 30px 30px;
+        line-height: 24px;
+        & .coin-icon {
+            width: 170px;
+            height: 170px;
+        }
+        & div h3 {
+            font-size: 24px;
+        }
+    }
+    .invest-section {
+        display: none;
+    }
+    //-----------------------
+    .list-of-bonus1 {
+        display: none;
+    }
+    .tocemonics-blocks {
+        flex-direction: column;
+    }
+    .list-of-bonus {
+        margin-top: 25px;
+        width: 100%;
+    }
+    //-----------------------------
+    .freq__list {
+    }
+    .freq__list li {
+        max-width: 100%;
+
+    }
+    //---------------
+    .last-block__icons {
+        flex-wrap: wrap;
+        width: 100%;
+       
     }
     
 }
