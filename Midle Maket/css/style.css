@@ -293,30 +293,34 @@ html body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 60px;
+  border: 1px solid #000;
 }
 .companies-logo img {
   opacity: 0.1;
-  margin-top: 60px;
-  margin-left: 15px;
 }
 
 .webimg-main {
   position: relative;
   height: 950px;
 }
-.webimg-main .webimg-main__background {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  background: url("../img/midle fox.png") center/auto auto no-repeat, url("../img/earth.png") center/auto auto no-repeat, url("../img/web.png") center/auto auto no-repeat;
-}
 
+@media (min-width: 768px) {
+  .webimg-main__background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background: url("../img/midle fox.png") center/auto auto no-repeat, url("../img/earth.png") center/auto auto no-repeat, url("../img/web.png") center/auto auto no-repeat;
+  }
+}
 .webimg-gradient {
   position: absolute;
   z-index: -10000;
@@ -349,30 +353,31 @@ html body {
   z-index: -10000;
 }
 
-.webimg-main__icons {
-  position: relative;
-  width: 100%;
-  height: 100%;
+@media (min-width: 768px) {
+  .webimg-main__icons {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .webimg-main__icons .red-icon {
+    position: absolute;
+    top: 40%;
+    left: 17%;
+    cursor: pointer;
+  }
+  .webimg-main__icons .orange-icon {
+    position: absolute;
+    bottom: 15%;
+    right: 28%;
+    cursor: pointer;
+  }
+  .webimg-main__icons .blue-icon {
+    position: absolute;
+    right: 18%;
+    top: 15%;
+    cursor: pointer;
+  }
 }
-.webimg-main__icons .red-icon {
-  position: absolute;
-  top: 40%;
-  left: 17%;
-  cursor: pointer;
-}
-.webimg-main__icons .orange-icon {
-  position: absolute;
-  bottom: 15%;
-  right: 28%;
-  cursor: pointer;
-}
-.webimg-main__icons .blue-icon {
-  position: absolute;
-  right: 18%;
-  top: 15%;
-  cursor: pointer;
-}
-
 .webimg-main__text {
   position: relative;
   height: 65%;
@@ -401,7 +406,7 @@ html body {
 }
 
 .btn-lets-find {
-  min-height: 55px;
+  height: 55px;
 }
 
 .webimg-main__text-container {
@@ -454,7 +459,7 @@ html body {
   text-align: center;
 }
 
-.how_it_works-blocks__orange .orange-icon {
+.how_it_works-blocks__orange .orange-icon-cub {
   height: 90px;
   width: 90px;
 }
@@ -522,6 +527,7 @@ html body {
   opacity: 0.8;
 }
 .pay_to_ear-blocks__long-right h3 {
+  font-weight: bold;
   color: white;
   opacity: 1;
 }
@@ -777,6 +783,9 @@ html body {
   padding-bottom: 75px;
 }
 
+.logo-non-opacity {
+  width: 70%;
+}
 .logo-non-opacity img {
   opacity: 0.7;
   margin-top: 10px;
@@ -976,4 +985,224 @@ html body {
   opacity: 0.7;
   font-size: 12px;
   background-color: #0D1428;
+}
+
+@media (min-width: 768px) {
+  .header-mobile-fox {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .white-block {
+    display: none;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 0 auto;
+    height: 30%;
+    border: 1px solid #000;
+  }
+  .btns .btns__link {
+    margin-top: 0;
+  }
+
+  .btn-moreabout {
+    width: 90%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+
+  .main-btn-join {
+    width: 80%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 0;
+  }
+
+  .btns__link {
+    width: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 14px;
+  }
+
+  .whois-left {
+    border: 1px solid #000;
+    width: 100%;
+    height: 700px;
+  }
+
+  .whois-left-text h1::after {
+    content: " mr. Spidershiba Inu?";
+    color: white;
+  }
+
+  .whois-right {
+    display: none;
+  }
+
+  .gradient-big {
+    background-color: #e11d89;
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    top: 220px;
+    left: 0;
+    filter: blur(0px);
+    -webkit-filter: blur(60px);
+    z-index: -10000;
+  }
+
+  .header-mobile-fox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .join-btn {
+    display: none;
+  }
+
+  .whois-header__logo {
+    width: 60%;
+  }
+
+  .whois-header__text::before {
+    content: "SpiderShiba";
+    color: white;
+    margin-right: 10px;
+  }
+
+  .whois-left-text :nth-child(2) {
+    padding-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .companies-logo {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+    height: 90px;
+  }
+
+  .companies-logo img {
+    width: 100px;
+  }
+
+  .webimg-main {
+    width: 100%;
+    height: 600px;
+  }
+
+  .webimg-main__background {
+    border: 1px solid #000;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background: url("../img/mobPic/fox.png") center/auto auto no-repeat, url("../img/mobPic/earth.png") center/auto auto no-repeat, url("../img/mobPic/web.png") center/auto auto no-repeat;
+  }
+
+  .webimg-main__text {
+    width: 100%;
+    height: 80%;
+    border: 1px solid #000;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .webimg-main__text .btn-lets-find {
+    width: 70%;
+    height: 25px;
+  }
+
+  .webimg-main__text div h3 {
+    font-size: 24px;
+  }
+
+  .webimg-main__icons {
+    border: 1px solid #000;
+  }
+
+  .webimg-main__icons div img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .red-icon {
+    position: absolute;
+    top: 185px;
+    left: 25px;
+  }
+
+  .orange-icon {
+    position: absolute;
+    bottom: 150px;
+    right: 70px;
+    cursor: pointer;
+  }
+
+  .blue-icon {
+    position: absolute;
+    right: 50px;
+    top: 160px;
+    cursor: pointer;
+  }
+
+  .webimg-main__text-container {
+    height: 90%;
+  }
+
+  .how_it_works-blocks {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .how_it_works-blocks div {
+    margin-top: 20px;
+  }
+
+  .pay_to_ear-blocks__long {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .pay_to_ear-blocks__long-left {
+    margin: 0 auto;
+    min-width: 318px;
+    background: url("../img/midle fox.png") 20px 20px/105px 105px no-repeat, url("../img/hoblin.png") 220px 20px/105px 105px no-repeat, url("../img/web2.png") 200px 2px/150px 150px no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(161, 68, 91, 0.411)), to(rgba(201, 13, 13, 0.055))), url("../img/city.png") left/cover no-repeat;
+    background: url("../img/midle fox.png") 20px 20px/105px 105px no-repeat, url("../img/hoblin.png") 220px 20px/105px 105px no-repeat, url("../img/web2.png") 200px 2px/150px 150px no-repeat, linear-gradient(rgba(161, 68, 91, 0.411), rgba(201, 13, 13, 0.055)), url("../img/city.png") left/cover no-repeat;
+    margin-bottom: 20px;
+  }
+
+  .pay_to_ear-blocks__long {
+    padding: 10px 15px 30px 10px;
+  }
 }
