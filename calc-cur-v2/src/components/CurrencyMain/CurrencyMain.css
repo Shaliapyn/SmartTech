@@ -1,0 +1,8 @@
+.currency {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    height: 250px;
+    margin: 0 auto;
+    border: 1px solid #000;
+  }

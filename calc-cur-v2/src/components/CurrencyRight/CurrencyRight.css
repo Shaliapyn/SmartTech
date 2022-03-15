@@ -1,0 +1,29 @@
+.right {
+    color: white;
+    width: 50%;
+    background-color: rgb(10, 157, 202);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.right input {
+    color: white;
+    width: 300px;
+    height: 40px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.right select {
+    width: 60px;
+    height: 45px;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+}
+.right div select option {
+    background-color: rgb(10, 157, 202);
+}
